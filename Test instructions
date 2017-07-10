@@ -1,0 +1,67 @@
+Tech Test
+
+
+
+File attached....
+
+
+
+Functionally, replicate what's seen in the video.
+
+This is a bit different as there are three designs and all three need to be accommodated.
+
+Don't need to be able to switch the styles in runtime, expected something is changed in code and re-ran and it switches.
+
+
+
+We will leave how to do that largely up to you, but a hint for less pain is:
+
+- allowing varying elements to be customised in certain ways via an external spec (corner radius, background colour, fonts, etc)
+
+- generating 3 corresponding versions of that spec by either json or manually instantiating some sort of struct
+
+- injecting said spec into the VCs.
+
+
+
+Instructions:
+
+
+
+- Load movie data from https://static.grabble.com/misc/ios-test/movies.json, use to populate first page of movies
+
+- Invalid data should be automagically ignored and not cause a crash
+
+- Tapping on a movie should open a movie details view controller, which will display the info shown in the sketch file. (note the animation. Thumbnail is preserved, recommend UIViewController Transitioning API)
+
+- Tapping buy ticket should open a web view to the ticket_url URL
+
+- The video up top should use the cover specified in trailer_cover_url as a BG Image. trailer_youtube_id is provided for getting it to actually play.
+
+- All the fields in the json are reasonably named so you should be able to figure it all out.
+
+
+
+Constraints:
+
+
+
+- No Story Board.
+
+- No Interface Builder.
+
+- Malformed Data should gracefully fail
+
+
+
+Structure of Zip:
+
+- Designs in Designs folder
+
+- Fonts in Font Folder
+
+- Video of expected behaviour in Video folder
+
+
+
+Good Luck!!

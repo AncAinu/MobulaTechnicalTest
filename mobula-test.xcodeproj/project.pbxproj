@@ -22,6 +22,7 @@
 		A93595F21F13EEAA0020597A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A93595F51F13EEAA0020597A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A93595F71F13EEAA0020597A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A93595FD1F13EECC0020597A /* Test instructions */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Test instructions"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +39,7 @@
 		A93595DF1F13EEAA0020597A = {
 			isa = PBXGroup;
 			children = (
+				A93595FD1F13EECC0020597A /* Test instructions */,
 				A93595EA1F13EEAA0020597A /* mobula-test */,
 				A93595E91F13EEAA0020597A /* Products */,
 			);
