@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import KeepLayout
 
 class MoviesViewController: UIViewController {
 	var viewModel: MoviesViewViewModel {
@@ -17,7 +18,7 @@ class MoviesViewController: UIViewController {
 		}
 	}
 	
-	let tableView = UITableView(frame: UIScreen.main.bounds)
+	let tableView = UITableView(frame: .zero, style: .plain)
 	
 	// MARK: INIT
 	init() {
@@ -39,6 +40,9 @@ class MoviesViewController: UIViewController {
 		tableView.delegate = self
 		tableView.dataSource = self
 		view.addSubview(tableView)
+		tableView.keepTopAlignTo(keepLayoutView)?.equal = 0
+		tableView.keepHorizontalInsets.equal = 0
+		tableView.keepBottomAlignTo(keepLayoutView)?.equal = 0
 	}
 }
 

@@ -7,39 +7,147 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		10A3F201F203B0548898011198399B53 /* Pods-mobula-test-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DA758D8F8502621A8C47102FD647B68 /* Pods-mobula-test-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		33563CB157106DE2251C7E47F27630AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		ED4659420DAF0FC8C413A6169781F942 /* Pods-mobula-test-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCA63E41F2D61F7E97A47E45E4AB3DA /* Pods-mobula-test-dummy.m */; };
+		008344C5230A83941D380E268216F6AA /* KeepLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AF359FDA51BA0962FEA83A068E29DB1 /* KeepLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1546AE30C2D23ED9C30C1B46F6644CF1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
+		2A98285BC65FAC9943DAEF00EB471096 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		37D4659642A3C53F7C2E72F283E758E6 /* KeepArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D7B21354DECAB38EABA224FC4193E23 /* KeepArray.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		3A31E374DA4FF30F356702D9BDC39691 /* KeepLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 755985930D25B6DC74F689A9F27B32D7 /* KeepLayoutConstraint.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		54E1CE3B8AA94DF8B3C80DD00116499C /* KeepLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B7EA47DF0F432D5A2A98A3B63F48338 /* KeepLayoutConstraint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5CD8AE3EBC2D0A61D089BC4C99E06FA1 /* Pods-mobula-test-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DA758D8F8502621A8C47102FD647B68 /* Pods-mobula-test-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62F27092FB2525BA41FAA46911918E4C /* KeepLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA02937FCAF27C9BC6F22AC07ECFF25 /* KeepLayout-dummy.m */; };
+		6D2BB74DB3EDC7D03BD1C9BB3F57F011 /* KeepView.h in Headers */ = {isa = PBXBuildFile; fileRef = 925393C90C607971AB4275D759AC2E51 /* KeepView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9EA5410EB92021D764988D2ACD2F6FD2 /* UIScrollView+KeepLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E731AF011D0E3075C05340356F98F3 /* UIScrollView+KeepLayout.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		A4F5B77D47EC6CD6E7F790418276147D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		ACC20EB486F7BB3F4BF02F8A8AE9338C /* KeepAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = C532CD6D844F50087600547C4CEF9281 /* KeepAttribute.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		B6B2B03D1DDAEF72A434AF3440B3C210 /* Pods-mobula-test-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCA63E41F2D61F7E97A47E45E4AB3DA /* Pods-mobula-test-dummy.m */; };
+		BF3DCCBB3CB3D578723484E283B593C0 /* KeepAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = DC5A31BFC5699732F4CE8395438E39AF /* KeepAttribute.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CF4CE12D9EB2DF87C5013059832D1772 /* UIViewController+KeepLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B62F735DC6FF7780578E2F61F8183273 /* UIViewController+KeepLayout.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D074767F414E75530E070C959F85237B /* KeepArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 5586254D0B2219BF5ACD86B942F32AB6 /* KeepArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0A6B7AD786958E7AFCE6AF268F083BB /* KeepTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C4FFE0804BEEC7BB52685784A0D0BAD /* KeepTypes.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D6A649D468AC1882908B20EE83AECA3F /* KeepLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B61E1AED82F23E6EDE7996970C6CEA /* KeepLayout.swift */; };
+		E0B5CB5EEEE25803B347C6F2B9DCC8BA /* KeepView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAA0FA9FD1C078F15585529586AA2EC /* KeepView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E3DD79F76C4CD6A1B00917B825B41DF0 /* UIViewController+KeepLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = A520E096608F4EE35DE80A819F7CFE0E /* UIViewController+KeepLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E3F25F0A8921E62A8987908A7852DF23 /* KeepLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E28211AF5CF13C924A85B34FDA1F8CF5 /* KeepLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E619F2181EC7F64288466F145CCC8CC7 /* UIScrollView+KeepLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 426286F27A933EF7629EAF899B49A625 /* UIScrollView+KeepLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E8DC766FB29A67EEA19F098949CEBA2A /* KeepTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E6877A7AF2C0ECECB686667D9F5B13D /* KeepTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE2742A862FBD9BC9AB24233ED881EF8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 158EDFB79AAEFAAA66CEB29620F02180;
+			remoteInfo = KeepLayout;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0E5686B06FF403BA97A86E7D39235DFE /* Pods-mobula-test.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-mobula-test.modulemap"; sourceTree = "<group>"; };
+		0E6877A7AF2C0ECECB686667D9F5B13D /* KeepTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KeepTypes.h; path = Sources/KeepTypes.h; sourceTree = "<group>"; };
 		0E8C3034B65593E945A8A60923429B22 /* Pods-mobula-test-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-mobula-test-acknowledgements.plist"; sourceTree = "<group>"; };
 		1DB765BFEFB4546F6B5E2269E2876CF6 /* Pods-mobula-test-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-mobula-test-acknowledgements.markdown"; sourceTree = "<group>"; };
 		1F798439895E295A6A2516F47938D663 /* Pods-mobula-test-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-mobula-test-frameworks.sh"; sourceTree = "<group>"; };
 		2DA758D8F8502621A8C47102FD647B68 /* Pods-mobula-test-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-mobula-test-umbrella.h"; sourceTree = "<group>"; };
+		36331EBBDEC48CDD7D00D9F65B9881EC /* KeepLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KeepLayout.framework; path = KeepLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E5166538D4488DDDFAE625930BD8C40 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		426286F27A933EF7629EAF899B49A625 /* UIScrollView+KeepLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+KeepLayout.h"; path = "Sources/UIScrollView+KeepLayout.h"; sourceTree = "<group>"; };
+		4B574D77155C272E7EFC6D81CF97B329 /* KeepLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = KeepLayout.modulemap; sourceTree = "<group>"; };
+		5586254D0B2219BF5ACD86B942F32AB6 /* KeepArray.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KeepArray.h; path = Sources/KeepArray.h; sourceTree = "<group>"; };
 		5B56EDCCDBE0CD3AC4C0CE402C02A280 /* Pods-mobula-test-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-mobula-test-resources.sh"; sourceTree = "<group>"; };
-		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		5C4FFE0804BEEC7BB52685784A0D0BAD /* KeepTypes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KeepTypes.m; path = Sources/KeepTypes.m; sourceTree = "<group>"; };
+		5D71C9BAA537D23DF9E747FB7143996B /* KeepLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeepLayout-prefix.pch"; sourceTree = "<group>"; };
+		755985930D25B6DC74F689A9F27B32D7 /* KeepLayoutConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KeepLayoutConstraint.m; path = Sources/KeepLayoutConstraint.m; sourceTree = "<group>"; };
+		7B7EA47DF0F432D5A2A98A3B63F48338 /* KeepLayoutConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KeepLayoutConstraint.h; path = Sources/KeepLayoutConstraint.h; sourceTree = "<group>"; };
 		7B879DF8FD39A4259B228768AD2B7916 /* Pods-mobula-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-mobula-test.debug.xcconfig"; sourceTree = "<group>"; };
+		7FA02937FCAF27C9BC6F22AC07ECFF25 /* KeepLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KeepLayout-dummy.m"; sourceTree = "<group>"; };
+		89B61E1AED82F23E6EDE7996970C6CEA /* KeepLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeepLayout.swift; path = Sources/KeepLayout.swift; sourceTree = "<group>"; };
+		925393C90C607971AB4275D759AC2E51 /* KeepView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KeepView.h; path = Sources/KeepView.h; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9AAA0FA9FD1C078F15585529586AA2EC /* KeepView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KeepView.m; path = Sources/KeepView.m; sourceTree = "<group>"; };
+		9AF359FDA51BA0962FEA83A068E29DB1 /* KeepLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KeepLayout.h; path = Sources/KeepLayout.h; sourceTree = "<group>"; };
 		9BCA63E41F2D61F7E97A47E45E4AB3DA /* Pods-mobula-test-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-mobula-test-dummy.m"; sourceTree = "<group>"; };
+		9D7B21354DECAB38EABA224FC4193E23 /* KeepArray.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KeepArray.m; path = Sources/KeepArray.m; sourceTree = "<group>"; };
 		9D8A612516CE859D3DDE42CF7DE51835 /* Pods-mobula-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-mobula-test.release.xcconfig"; sourceTree = "<group>"; };
-		CC505FCCB9C7A544526B61D7D6431AE0 /* Pods_mobula_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_mobula_test.framework; path = "Pods-mobula-test.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F169B6C9AD0BBFA3F6D9046019E1FBF /* KeepLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KeepLayout.xcconfig; sourceTree = "<group>"; };
+		A2F5C6E206DCA2553B5A9E08B4D36836 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A520E096608F4EE35DE80A819F7CFE0E /* UIViewController+KeepLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+KeepLayout.h"; path = "Sources/UIViewController+KeepLayout.h"; sourceTree = "<group>"; };
+		B62F735DC6FF7780578E2F61F8183273 /* UIViewController+KeepLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+KeepLayout.m"; path = "Sources/UIViewController+KeepLayout.m"; sourceTree = "<group>"; };
+		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		C532CD6D844F50087600547C4CEF9281 /* KeepAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KeepAttribute.m; path = Sources/KeepAttribute.m; sourceTree = "<group>"; };
+		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		DC5A31BFC5699732F4CE8395438E39AF /* KeepAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KeepAttribute.h; path = Sources/KeepAttribute.h; sourceTree = "<group>"; };
+		E28211AF5CF13C924A85B34FDA1F8CF5 /* KeepLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeepLayout-umbrella.h"; sourceTree = "<group>"; };
+		E4DAE036DD1995B71C76A3093BD0229D /* Pods_mobula_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_mobula_test.framework; path = "Pods-mobula-test.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5E731AF011D0E3075C05340356F98F3 /* UIScrollView+KeepLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+KeepLayout.m"; path = "Sources/UIScrollView+KeepLayout.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3D35B77CC7CFB40CE7B61C2D5F1F9BA9 /* Frameworks */ = {
+		92A3318A54E1720B0A2C2391C3D79A49 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33563CB157106DE2251C7E47F27630AF /* Foundation.framework in Frameworks */,
+				A4F5B77D47EC6CD6E7F790418276147D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F72F6DF4259FFF199C17AC29F3322654 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A98285BC65FAC9943DAEF00EB471096 /* Foundation.framework in Frameworks */,
+				1546AE30C2D23ED9C30C1B46F6644CF1 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1754EE98280AE75080D50CFC15745000 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				89B61E1AED82F23E6EDE7996970C6CEA /* KeepLayout.swift */,
+			);
+			name = Swift;
+			sourceTree = "<group>";
+		};
+		1C81276DB5F1D5277A2306A011223132 /* KeepLayout */ = {
+			isa = PBXGroup;
+			children = (
+				6C96CD8B9DC55AA0EB71CD01B3AF8229 /* ObjC */,
+				5BC60CBDA08F8A7BABE4E144F8F09FEC /* Support Files */,
+				1754EE98280AE75080D50CFC15745000 /* Swift */,
+			);
+			name = KeepLayout;
+			path = KeepLayout;
+			sourceTree = "<group>";
+		};
+		413544385CBB92BE813A8F14E5DA51B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				36331EBBDEC48CDD7D00D9F65B9881EC /* KeepLayout.framework */,
+				E4DAE036DD1995B71C76A3093BD0229D /* Pods_mobula_test.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				438B396F6B4147076630CAEFE34282C1 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		438B396F6B4147076630CAEFE34282C1 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */,
+				B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
 		588C73588B6D5BA180540EDECE1BB3BA /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -48,30 +156,51 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		5BC60CBDA08F8A7BABE4E144F8F09FEC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A2F5C6E206DCA2553B5A9E08B4D36836 /* Info.plist */,
+				4B574D77155C272E7EFC6D81CF97B329 /* KeepLayout.modulemap */,
+				9F169B6C9AD0BBFA3F6D9046019E1FBF /* KeepLayout.xcconfig */,
+				7FA02937FCAF27C9BC6F22AC07ECFF25 /* KeepLayout-dummy.m */,
+				5D71C9BAA537D23DF9E747FB7143996B /* KeepLayout-prefix.pch */,
+				E28211AF5CF13C924A85B34FDA1F8CF5 /* KeepLayout-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/KeepLayout";
+			sourceTree = "<group>";
+		};
+		6C96CD8B9DC55AA0EB71CD01B3AF8229 /* ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				5586254D0B2219BF5ACD86B942F32AB6 /* KeepArray.h */,
+				9D7B21354DECAB38EABA224FC4193E23 /* KeepArray.m */,
+				DC5A31BFC5699732F4CE8395438E39AF /* KeepAttribute.h */,
+				C532CD6D844F50087600547C4CEF9281 /* KeepAttribute.m */,
+				9AF359FDA51BA0962FEA83A068E29DB1 /* KeepLayout.h */,
+				7B7EA47DF0F432D5A2A98A3B63F48338 /* KeepLayoutConstraint.h */,
+				755985930D25B6DC74F689A9F27B32D7 /* KeepLayoutConstraint.m */,
+				0E6877A7AF2C0ECECB686667D9F5B13D /* KeepTypes.h */,
+				5C4FFE0804BEEC7BB52685784A0D0BAD /* KeepTypes.m */,
+				925393C90C607971AB4275D759AC2E51 /* KeepView.h */,
+				9AAA0FA9FD1C078F15585529586AA2EC /* KeepView.m */,
+				426286F27A933EF7629EAF899B49A625 /* UIScrollView+KeepLayout.h */,
+				E5E731AF011D0E3075C05340356F98F3 /* UIScrollView+KeepLayout.m */,
+				A520E096608F4EE35DE80A819F7CFE0E /* UIViewController+KeepLayout.h */,
+				B62F735DC6FF7780578E2F61F8183273 /* UIViewController+KeepLayout.m */,
+			);
+			name = ObjC;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				BC94276693DF8B7C3061079ABCA8B423 /* Products */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				CC1ACF394D6AB7FB69F7CA88F4AA3E79 /* Pods */,
+				413544385CBB92BE813A8F14E5DA51B5 /* Products */,
 				588C73588B6D5BA180540EDECE1BB3BA /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		BC94276693DF8B7C3061079ABCA8B423 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				CC505FCCB9C7A544526B61D7D6431AE0 /* Pods_mobula_test.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		C5FEB0BE32970703A45A18ADBDF31669 /* Pods-mobula-test */ = {
@@ -92,43 +221,77 @@
 			path = "Target Support Files/Pods-mobula-test";
 			sourceTree = "<group>";
 		};
-		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+		CC1ACF394D6AB7FB69F7CA88F4AA3E79 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+				1C81276DB5F1D5277A2306A011223132 /* KeepLayout */,
 			);
-			name = iOS;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		3279A0A4D4ECF05428CADEF8672DC566 /* Headers */ = {
+		920262D94785673AFB6BE14693230B72 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10A3F201F203B0548898011198399B53 /* Pods-mobula-test-umbrella.h in Headers */,
+				5CD8AE3EBC2D0A61D089BC4C99E06FA1 /* Pods-mobula-test-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBB843D6B1B9DE1ABD06453FEE1CD520 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D074767F414E75530E070C959F85237B /* KeepArray.h in Headers */,
+				BF3DCCBB3CB3D578723484E283B593C0 /* KeepAttribute.h in Headers */,
+				E3F25F0A8921E62A8987908A7852DF23 /* KeepLayout-umbrella.h in Headers */,
+				008344C5230A83941D380E268216F6AA /* KeepLayout.h in Headers */,
+				54E1CE3B8AA94DF8B3C80DD00116499C /* KeepLayoutConstraint.h in Headers */,
+				E8DC766FB29A67EEA19F098949CEBA2A /* KeepTypes.h in Headers */,
+				6D2BB74DB3EDC7D03BD1C9BB3F57F011 /* KeepView.h in Headers */,
+				E619F2181EC7F64288466F145CCC8CC7 /* UIScrollView+KeepLayout.h in Headers */,
+				E3DD79F76C4CD6A1B00917B825B41DF0 /* UIViewController+KeepLayout.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		17F127D368379D2C697BFCAD89CE6336 /* Pods-mobula-test */ = {
+		158EDFB79AAEFAAA66CEB29620F02180 /* KeepLayout */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CDB195A52DD871ECACB84EC6A7AC05C9 /* Build configuration list for PBXNativeTarget "Pods-mobula-test" */;
+			buildConfigurationList = 940765971CEA152F8AC6ED785B5C4F0B /* Build configuration list for PBXNativeTarget "KeepLayout" */;
 			buildPhases = (
-				175B6C7EC79407B1C848F822C5A89DA7 /* Sources */,
-				3D35B77CC7CFB40CE7B61C2D5F1F9BA9 /* Frameworks */,
-				3279A0A4D4ECF05428CADEF8672DC566 /* Headers */,
+				44D3642C38C60F0D50390BF4B9BCFD34 /* Sources */,
+				F72F6DF4259FFF199C17AC29F3322654 /* Frameworks */,
+				FBB843D6B1B9DE1ABD06453FEE1CD520 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
+			name = KeepLayout;
+			productName = KeepLayout;
+			productReference = 36331EBBDEC48CDD7D00D9F65B9881EC /* KeepLayout.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		22245EB4B66F30B77133AB43FB474373 /* Pods-mobula-test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC9262943D292F439DFEB2B6F7F8073E /* Build configuration list for PBXNativeTarget "Pods-mobula-test" */;
+			buildPhases = (
+				B6B6CE5274217ED12DD1C5451033E97C /* Sources */,
+				92A3318A54E1720B0A2C2391C3D79A49 /* Frameworks */,
+				920262D94785673AFB6BE14693230B72 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1C5812AA1EA9D378840DC0764FE9D05F /* PBXTargetDependency */,
+			);
 			name = "Pods-mobula-test";
 			productName = "Pods-mobula-test";
-			productReference = CC505FCCB9C7A544526B61D7D6431AE0 /* Pods_mobula_test.framework */;
+			productReference = E4DAE036DD1995B71C76A3093BD0229D /* Pods_mobula_test.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -148,27 +311,92 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = BC94276693DF8B7C3061079ABCA8B423 /* Products */;
+			productRefGroup = 413544385CBB92BE813A8F14E5DA51B5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				17F127D368379D2C697BFCAD89CE6336 /* Pods-mobula-test */,
+				158EDFB79AAEFAAA66CEB29620F02180 /* KeepLayout */,
+				22245EB4B66F30B77133AB43FB474373 /* Pods-mobula-test */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		175B6C7EC79407B1C848F822C5A89DA7 /* Sources */ = {
+		44D3642C38C60F0D50390BF4B9BCFD34 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED4659420DAF0FC8C413A6169781F942 /* Pods-mobula-test-dummy.m in Sources */,
+				37D4659642A3C53F7C2E72F283E758E6 /* KeepArray.m in Sources */,
+				ACC20EB486F7BB3F4BF02F8A8AE9338C /* KeepAttribute.m in Sources */,
+				62F27092FB2525BA41FAA46911918E4C /* KeepLayout-dummy.m in Sources */,
+				D6A649D468AC1882908B20EE83AECA3F /* KeepLayout.swift in Sources */,
+				3A31E374DA4FF30F356702D9BDC39691 /* KeepLayoutConstraint.m in Sources */,
+				D0A6B7AD786958E7AFCE6AF268F083BB /* KeepTypes.m in Sources */,
+				E0B5CB5EEEE25803B347C6F2B9DCC8BA /* KeepView.m in Sources */,
+				9EA5410EB92021D764988D2ACD2F6FD2 /* UIScrollView+KeepLayout.m in Sources */,
+				CF4CE12D9EB2DF87C5013059832D1772 /* UIViewController+KeepLayout.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6B6CE5274217ED12DD1C5451033E97C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6B2B03D1DDAEF72A434AF3440B3C210 /* Pods-mobula-test-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		1C5812AA1EA9D378840DC0764FE9D05F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KeepLayout;
+			target = 158EDFB79AAEFAAA66CEB29620F02180 /* KeepLayout */;
+			targetProxy = CE2742A862FBD9BC9AB24233ED881EF8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		0BF8365F2BCB178466F6BAEB17F28F91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B879DF8FD39A4259B228768AD2B7916 /* Pods-mobula-test.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-mobula-test/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-mobula-test/Pods-mobula-test.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_mobula_test;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		163D87BE96A63549B0EACF1CC31A2E90 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -217,6 +445,75 @@
 			};
 			name = Debug;
 		};
+		476A5E2C7062D89CBD2EE29871D5CC50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F169B6C9AD0BBFA3F6D9046019E1FBF /* KeepLayout.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/KeepLayout/KeepLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KeepLayout/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/KeepLayout/KeepLayout.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = KeepLayout;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		60C448423E92762FFD6EC3317BFF6F5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F169B6C9AD0BBFA3F6D9046019E1FBF /* KeepLayout.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/KeepLayout/KeepLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/KeepLayout/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/KeepLayout/KeepLayout.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = KeepLayout;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		707B86CFB21B645E37109F39754D4051 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -261,43 +558,7 @@
 			};
 			name = Release;
 		};
-		7D08C7B044F5B5FC665C8D8EF13FE68E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7B879DF8FD39A4259B228768AD2B7916 /* Pods-mobula-test.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-mobula-test/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-mobula-test/Pods-mobula-test.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_mobula_test;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		E81682AE5127303F066A27AE5981EDF2 /* Release */ = {
+		EA5F7868A3D1BE5042A835D938C6239A /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9D8A612516CE859D3DDE42CF7DE51835 /* Pods-mobula-test.release.xcconfig */;
 			buildSettings = {
@@ -327,6 +588,8 @@
 				PRODUCT_NAME = Pods_mobula_test;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -345,11 +608,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CDB195A52DD871ECACB84EC6A7AC05C9 /* Build configuration list for PBXNativeTarget "Pods-mobula-test" */ = {
+		940765971CEA152F8AC6ED785B5C4F0B /* Build configuration list for PBXNativeTarget "KeepLayout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7D08C7B044F5B5FC665C8D8EF13FE68E /* Debug */,
-				E81682AE5127303F066A27AE5981EDF2 /* Release */,
+				476A5E2C7062D89CBD2EE29871D5CC50 /* Debug */,
+				60C448423E92762FFD6EC3317BFF6F5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC9262943D292F439DFEB2B6F7F8073E /* Build configuration list for PBXNativeTarget "Pods-mobula-test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BF8365F2BCB178466F6BAEB17F28F91 /* Debug */,
+				EA5F7868A3D1BE5042A835D938C6239A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
