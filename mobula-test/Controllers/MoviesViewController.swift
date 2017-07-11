@@ -10,21 +10,18 @@ import UIKit
 import KeepLayout
 
 class MoviesViewController: UIViewController {
-	var viewModel: MoviesViewViewModel {
-		didSet {
-			viewModel.items.bindAndFire { [unowned self] _ in
-				self.tableView.reloadData()
-			}
-		}
-	}
+	let viewModel: MoviesViewViewModel = MoviesViewModelFromMovies()
 	
 	let tableView = UITableView(frame: .zero, style: .plain)
 	
 	// MARK: INIT
 	init() {
-		viewModel = MoviesViewModelFromMovies(movies: [Movie(title: "test")])
-		
 		super.init(nibName: nil, bundle: nil)
+		
+		viewModel.items.bindAndFire { [unowned self] _ in
+			self.tableView.reloadData()
+		}
+		viewModel.reloadMovies()
 	}
 	
 	required init?(coder aDecoder: NSCoder) {

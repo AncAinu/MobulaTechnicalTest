@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 struct Item {
 	var title: String
@@ -14,16 +15,30 @@ struct Item {
 
 protocol MoviesViewViewModel {
 	var items: Dynamic<[Item]> { get }
+	
+	func reloadMovies()
 }
 
 class MoviesViewModelFromMovies: MoviesViewViewModel {
-	let movies: [Movie]
+	private(set) var movies = [Movie]() {
+		didSet {
+			items.value = movies.map({Item(title: $0.title)})
+		}
+	}
 	
-	var items: Dynamic<[Item]>
+	var items = Dynamic<[Item]>([Item]())
 	
-	init(movies: [Movie]) {
-		self.movies = movies
+	init() {
 		
-		self.items = Dynamic( movies.map({Item(title: $0.title)}) )
+	}
+	
+	func reloadMovies() {
+		Alamofire.request("https://static.grabble.com/misc/ios-test/movies.json").responseJSON { [weak self] response in
+			if let resultInfo = response.result.value as? [String: Any] {
+				if let moviesInfo = resultInfo["results"] as? [[String: Any]] {
+					self?.movies = moviesInfo.map {Movie(info: $0)}
+				}
+			}
+		}
 	}
 }

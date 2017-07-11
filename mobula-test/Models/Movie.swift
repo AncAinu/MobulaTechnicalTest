@@ -9,9 +9,9 @@
 import Foundation
 
 class Movie {
-	var title: String = ""
+	var title: String
 	
-	init(title: String) {
-		self.title = title
+	init(info: [String: Any]) {
+		self.title = info["title"] as? String ?? ""
 	}
 }
