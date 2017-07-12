@@ -13,9 +13,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
 
-
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-		// Override point for customization after application launch.
+		
+		let layout = Layout()
+		layout.viewControllerBackgroundColor = .blue
+		layout.movieThumbnailCornerRadius = 4.0
+		
+		let moviesViewViewModel = MoviesViewModelFromLayout(layout: layout)
+		let moviesViewController = MoviesViewController(viewModel: moviesViewViewModel)
+		
+		window = UIWindow(frame: UIScreen.main.bounds)
+		window?.rootViewController = UINavigationController(rootViewController: moviesViewController)
+		window?.makeKeyAndVisible()
+		
 		return true
 	}
 
