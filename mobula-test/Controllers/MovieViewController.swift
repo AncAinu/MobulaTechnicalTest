@@ -44,6 +44,7 @@ class MovieViewController: UIViewController {
 		
 		view.backgroundColor = .white
 		
+		movieThumbnailImageView.heroID = "movieThumbnail"
 		movieThumbnailImageView.backgroundColor = .gray
 		view.addSubview(movieThumbnailImageView)
 		movieThumbnailImageView.keepTopAlignTo(keepLayoutView)?.equal = 10

@@ -24,7 +24,8 @@ protocol MoviesViewViewModel {
 class MoviesViewModelFromMovies: MoviesViewViewModel {
 	private(set) var movies = [Movie]() {
 		didSet {
-			items.value = movies.map({Item(title: $0.title, thumbnailURL: $0.thumbnailUrl)})
+			items.value = movies.map({Item(title: $0.title,
+			                               thumbnailURL: $0.thumbnailUrl)})
 		}
 	}
 	

@@ -9,6 +9,7 @@
 import UIKit
 import KeepLayout
 import AlamofireImage
+import Hero
 
 class MoviesViewController: UIViewController {
 	let viewModel: MoviesViewViewModel = MoviesViewModelFromMovies()
@@ -36,6 +37,8 @@ class MoviesViewController: UIViewController {
 	// MARK: LAYOUT
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
+		isHeroEnabled = true
 		
 		view.backgroundColor = .white
 		
@@ -89,8 +92,14 @@ extension MoviesViewController: UICollectionViewDataSource, UICollectionViewDele
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+		collectionView.visibleCells.forEach { ($0 as? MovieCell)?.movieThumbnailImageView.heroID = nil } // Clean other cell from transition tags
+		if let cell = collectionView.cellForItem(at: indexPath) as? MovieCell {
+			cell.movieThumbnailImageView.heroID = "movieThumbnail"
+		}
+		
 		let movieViewViewModel = viewModel.movieViewViewModel(index: indexPath.row)
 		let movieViewController = MovieViewController(viewModel: movieViewViewModel)
+		navigationController?.isHeroEnabled = true
 		navigationController?.pushViewController(movieViewController, animated: true)
 	}
 }
