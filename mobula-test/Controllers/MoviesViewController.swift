@@ -41,7 +41,7 @@ class MoviesViewController: UIViewController {
 		collectionView.backgroundColor = .white
 		collectionView.delegate = self
 		collectionView.dataSource = self
-		collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+		collectionView.register(MovieCell.self, forCellWithReuseIdentifier: MovieCell.identifier)
 		view.addSubview(collectionView)
 		collectionView.keepTopAlignTo(keepLayoutView)?.equal = 0
 		collectionView.keepHorizontalInsets.equal = 0
@@ -58,8 +58,8 @@ extension MoviesViewController: UICollectionViewDataSource, UICollectionViewDele
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		let item = viewModel.items.value[indexPath.row]
 		
-		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-		cell.contentView.backgroundColor = .gray
+		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MovieCell.identifier, for: indexPath) as! MovieCell
+		cell.titleLabel.text = item.title
 		
 		return cell
 	}

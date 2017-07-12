@@ -14,6 +14,7 @@
 		A9A9D56E1F1556DB00761454 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A9D56D1F1556DB00761454 /* Dynamic.swift */; };
 		A9A9D5711F15574A00761454 /* MoviesViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A9D5701F15574A00761454 /* MoviesViewViewModel.swift */; };
 		A9A9D5731F15587500761454 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A9D5721F15587500761454 /* Movie.swift */; };
+		A9A9D5751F161EA800761454 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A9D5741F161EA800761454 /* MovieCell.swift */; };
 		EF9D4A8599958292181203FE /* Pods_mobula_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98443919D6FD3DFF4C7C52BD /* Pods_mobula_test.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		A9A9D56D1F1556DB00761454 /* Dynamic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Dynamic.swift; path = ViewModels/Helpers/Dynamic.swift; sourceTree = "<group>"; };
 		A9A9D5701F15574A00761454 /* MoviesViewViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoviesViewViewModel.swift; path = ViewModels/MoviesViewViewModel.swift; sourceTree = "<group>"; };
 		A9A9D5721F15587500761454 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Movie.swift; path = Models/Movie.swift; sourceTree = "<group>"; };
+		A9A9D5741F161EA800761454 /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieCell.swift; path = Views/MovieCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 		A93596011F140CC80020597A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A9A9D5741F161EA800761454 /* MovieCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			files = (
 				A9A9D56E1F1556DB00761454 /* Dynamic.swift in Sources */,
 				A93595EC1F13EEAA0020597A /* AppDelegate.swift in Sources */,
+				A9A9D5751F161EA800761454 /* MovieCell.swift in Sources */,
 				A93596001F140CB10020597A /* MoviesViewController.swift in Sources */,
 				A9A9D5711F15574A00761454 /* MoviesViewViewModel.swift in Sources */,
 				A9A9D5731F15587500761454 /* Movie.swift in Sources */,
