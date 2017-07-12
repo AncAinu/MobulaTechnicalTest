@@ -12,14 +12,18 @@ import KeepLayout
 class MoviesViewController: UIViewController {
 	let viewModel: MoviesViewViewModel = MoviesViewModelFromMovies()
 	
-	let tableView = UITableView(frame: .zero, style: .plain)
+	let collectionView: UICollectionView
 	
 	// MARK: INIT
 	init() {
+		let collectionViewLayout = UICollectionViewFlowLayout()
+		collectionViewLayout.scrollDirection = .vertical
+		collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
+		
 		super.init(nibName: nil, bundle: nil)
 		
 		viewModel.items.bindAndFire { [unowned self] _ in
-			self.tableView.reloadData()
+			self.collectionView.reloadData()
 		}
 		viewModel.reloadMovies()
 	}
@@ -34,27 +38,46 @@ class MoviesViewController: UIViewController {
 		
 		view.backgroundColor = .white
 		
-		tableView.delegate = self
-		tableView.dataSource = self
-		view.addSubview(tableView)
-		tableView.keepTopAlignTo(keepLayoutView)?.equal = 0
-		tableView.keepHorizontalInsets.equal = 0
-		tableView.keepBottomAlignTo(keepLayoutView)?.equal = 0
+		collectionView.backgroundColor = .white
+		collectionView.delegate = self
+		collectionView.dataSource = self
+		collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+		view.addSubview(collectionView)
+		collectionView.keepTopAlignTo(keepLayoutView)?.equal = 0
+		collectionView.keepHorizontalInsets.equal = 0
+		collectionView.keepBottomAlignTo(keepLayoutView)?.equal = 0
 	}
 }
 
 // MARK: TABLE
-extension MoviesViewController: UITableViewDataSource, UITableViewDelegate {
-	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+extension MoviesViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 		return viewModel.items.value.count
 	}
 	
-	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		let item = viewModel.items.value[indexPath.row]
 		
-		let cell = tableView.dequeueReusableCell(withIdentifier: "cell") ?? UITableViewCell(style: .default, reuseIdentifier: "cell")
-		cell.textLabel?.text = item.title
+		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+		cell.contentView.backgroundColor = .gray
 		
 		return cell
+	}
+	
+	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+		let cellWidth = (view.bounds.size.width - 30.0) / 2.0
+		return CGSize(width: (view.bounds.size.width - 30.0) / 2.0, height: cellWidth * 1.5)
+	}
+	
+	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+		return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+	}
+	
+	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+		return 10
+	}
+	
+	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+		return 10
 	}
 }
