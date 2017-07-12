@@ -20,6 +20,8 @@ class MovieCell: UICollectionViewCell {
 		
 		contentView.backgroundColor = .gray
 		
+		movieThumbnailImageView.contentMode = .scaleAspectFill
+		movieThumbnailImageView.clipsToBounds = true
 		movieThumbnailImageView.backgroundColor = .lightGray
 		contentView.addSubview(movieThumbnailImageView)
 		movieThumbnailImageView.keepTopInset.equal = 0

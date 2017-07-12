@@ -15,13 +15,16 @@ struct Item {
 }
 
 protocol MoviesViewViewModel {
+	var backgroundColor: Dynamic<UIColor> { get }
+	var movieThumbnailCornerRadius: Dynamic<CGFloat> { get }
 	var items: Dynamic<[Item]> { get }
 	
 	func reloadMovies()
 	func movieViewViewModel(index: Int) -> MovieViewViewModel
 }
 
-class MoviesViewModelFromMovies: MoviesViewViewModel {
+class MoviesViewModelFromLayout: MoviesViewViewModel {
+	private let layout: Layout
 	private(set) var movies = [Movie]() {
 		didSet {
 			items.value = movies.map({Item(title: $0.title,
@@ -30,9 +33,15 @@ class MoviesViewModelFromMovies: MoviesViewViewModel {
 	}
 	
 	var items = Dynamic<[Item]>([Item]())
+	// Layout
+	var backgroundColor: Dynamic<UIColor>
+	var movieThumbnailCornerRadius: Dynamic<CGFloat>
 	
-	init() {
+	init(layout: Layout) {
+		self.layout = layout
 		
+		backgroundColor = Dynamic(layout.viewControllerBackgroundColor)
+		movieThumbnailCornerRadius = Dynamic(CGFloat(layout.movieThumbnailCornerRadius))
 	}
 	
 	func reloadMovies() {
@@ -46,6 +55,6 @@ class MoviesViewModelFromMovies: MoviesViewViewModel {
 	}
 	
 	func movieViewViewModel(index: Int) -> MovieViewViewModel {
-		return MovieViewViewModelFromMovie(movie: movies[index])
+		return MovieViewViewModelFromLayoutAndMovie(layout: layout, movie: movies[index])
 	}
 }

@@ -12,12 +12,14 @@ import AlamofireImage
 import Hero
 
 class MoviesViewController: UIViewController {
-	let viewModel: MoviesViewViewModel = MoviesViewModelFromMovies()
+	let viewModel: MoviesViewViewModel
 	
 	let collectionView: UICollectionView
 	
 	// MARK: INIT
-	init() {
+	init(viewModel: MoviesViewViewModel) {
+		self.viewModel = viewModel
+		
 		let collectionViewLayout = UICollectionViewFlowLayout()
 		collectionViewLayout.scrollDirection = .vertical
 		collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
@@ -25,6 +27,9 @@ class MoviesViewController: UIViewController {
 		super.init(nibName: nil, bundle: nil)
 		
 		viewModel.items.bindAndFire { [unowned self] _ in
+			self.collectionView.reloadData()
+		}
+		viewModel.movieThumbnailCornerRadius.bind { [unowned self] _ in
 			self.collectionView.reloadData()
 		}
 		viewModel.reloadMovies()
@@ -40,9 +45,11 @@ class MoviesViewController: UIViewController {
 		
 		isHeroEnabled = true
 		
-		view.backgroundColor = .white
+		viewModel.backgroundColor.bindAndFire { [weak self] backgroundColor in
+			self?.view.backgroundColor = backgroundColor
+			self?.collectionView.backgroundColor = .white
+		}
 		
-		collectionView.backgroundColor = .white
 		collectionView.delegate = self
 		collectionView.dataSource = self
 		collectionView.register(MovieCell.self, forCellWithReuseIdentifier: MovieCell.identifier)
@@ -64,6 +71,7 @@ extension MoviesViewController: UICollectionViewDataSource, UICollectionViewDele
 		
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MovieCell.identifier, for: indexPath) as! MovieCell
 		cell.titleLabel.text = item.title
+		cell.movieThumbnailImageView.layer.cornerRadius = viewModel.movieThumbnailCornerRadius.value
 		if item.thumbnailURL != nil {
 			cell.movieThumbnailImageView.af_setImage(withURL: item.thumbnailURL!)
 		}

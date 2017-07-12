@@ -17,6 +17,7 @@
 		A9A9D5751F161EA800761454 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A9D5741F161EA800761454 /* MovieCell.swift */; };
 		A9A9D5771F16275000761454 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A9D5761F16275000761454 /* MovieViewController.swift */; };
 		A9A9D5791F1628C700761454 /* MovieViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A9D5781F1628C700761454 /* MovieViewViewModel.swift */; };
+		A9A9D57B1F163BF300761454 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A9D57A1F163BF300761454 /* Layout.swift */; };
 		EF9D4A8599958292181203FE /* Pods_mobula_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98443919D6FD3DFF4C7C52BD /* Pods_mobula_test.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		A9A9D5741F161EA800761454 /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieCell.swift; path = Views/MovieCell.swift; sourceTree = "<group>"; };
 		A9A9D5761F16275000761454 /* MovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieViewController.swift; path = Controllers/MovieViewController.swift; sourceTree = "<group>"; };
 		A9A9D5781F1628C700761454 /* MovieViewViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieViewViewModel.swift; path = ViewModels/MovieViewViewModel.swift; sourceTree = "<group>"; };
+		A9A9D57A1F163BF300761454 /* Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Layout.swift; path = Models/Layout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				A9A9D5721F15587500761454 /* Movie.swift */,
+				A9A9D57A1F163BF300761454 /* Layout.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				A9A9D5791F1628C700761454 /* MovieViewViewModel.swift in Sources */,
 				A93595EC1F13EEAA0020597A /* AppDelegate.swift in Sources */,
 				A9A9D5751F161EA800761454 /* MovieCell.swift in Sources */,
+				A9A9D57B1F163BF300761454 /* Layout.swift in Sources */,
 				A93596001F140CB10020597A /* MoviesViewController.swift in Sources */,
 				A9A9D5711F15574A00761454 /* MoviesViewViewModel.swift in Sources */,
 				A9A9D5731F15587500761454 /* Movie.swift in Sources */,

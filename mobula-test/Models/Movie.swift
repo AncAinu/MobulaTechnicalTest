@@ -9,15 +9,15 @@
 import Foundation
 
 class Movie {
-	var id: Int
-	var title: String
-	var description: String
-	var director: String
-	var starring: String?
-	var thumbnailUrl: URL?
-	var trailerCoverUrl: URL?
-	var ticketUrl: URL?
-	var trailerYoutubeId: String?
+	let id: Int
+	let title: String
+	let description: String
+	let director: String
+	let starring: String?
+	let thumbnailUrl: URL?
+	let trailerCoverUrl: URL?
+	let ticketUrl: URL?
+	let trailerYoutubeId: String?
 	
 	init(info: [String: Any]) {
 		self.id = info["id"] as? Int ?? 0
