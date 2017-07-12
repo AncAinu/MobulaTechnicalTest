@@ -12,12 +12,19 @@ class MovieCell: UICollectionViewCell {
 	
 	static let identifier = "MovieCell"
 	
+	let movieThumbnailImageView = UIImageView()
 	let titleLabel = UILabel()
 	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 		
 		contentView.backgroundColor = .gray
+		
+		movieThumbnailImageView.backgroundColor = .lightGray
+		contentView.addSubview(movieThumbnailImageView)
+		movieThumbnailImageView.keepTopInset.equal = 0
+		movieThumbnailImageView.keepHorizontalInsets.equal = 0
+		movieThumbnailImageView.keepAspectRatio.equal = 0.75
 		
 		titleLabel.textColor = .white
 		contentView.addSubview(titleLabel)

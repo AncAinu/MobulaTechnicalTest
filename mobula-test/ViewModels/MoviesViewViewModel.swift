@@ -11,6 +11,7 @@ import Alamofire
 
 struct Item {
 	var title: String
+	var thumbnailURL: URL?
 }
 
 protocol MoviesViewViewModel {
@@ -23,7 +24,7 @@ protocol MoviesViewViewModel {
 class MoviesViewModelFromMovies: MoviesViewViewModel {
 	private(set) var movies = [Movie]() {
 		didSet {
-			items.value = movies.map({Item(title: $0.title)})
+			items.value = movies.map({Item(title: $0.title, thumbnailURL: $0.thumbnailUrl)})
 		}
 	}
 	

@@ -24,6 +24,14 @@ class MovieViewController: UIViewController {
 		viewModel.title.bindAndFire { [unowned self] title in
 			self.titleLabel.text = title
 		}
+		viewModel.thumbnailURL.bindAndFire { [unowned self] thumbnailURL in
+			if thumbnailURL != nil {
+				self.movieThumbnailImageView.af_setImage(withURL: thumbnailURL!)
+			}
+			else {
+				self.movieThumbnailImageView.image = nil
+			}
+		}
 	}
 	
 	required init?(coder aDecoder: NSCoder) {

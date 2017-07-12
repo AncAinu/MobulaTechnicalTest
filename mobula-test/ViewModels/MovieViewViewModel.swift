@@ -10,16 +10,19 @@ import Foundation
 
 protocol MovieViewViewModel {
 	var title: Dynamic<String> { get }
+	var thumbnailURL: Dynamic<URL?> { get }
 }
 
 class MovieViewViewModelFromMovie: MovieViewViewModel {
 	private(set) var movie: Movie
 	
 	var title: Dynamic<String>
+	var thumbnailURL: Dynamic<URL?>
 	
 	init(movie: Movie) {
 		self.movie = movie
 		
 		self.title = Dynamic<String>(movie.title)
+		self.thumbnailURL = Dynamic<URL?>(movie.thumbnailUrl)
 	}
 }

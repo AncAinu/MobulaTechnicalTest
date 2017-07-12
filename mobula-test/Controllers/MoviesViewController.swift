@@ -8,6 +8,7 @@
 
 import UIKit
 import KeepLayout
+import AlamofireImage
 
 class MoviesViewController: UIViewController {
 	let viewModel: MoviesViewViewModel = MoviesViewModelFromMovies()
@@ -60,6 +61,12 @@ extension MoviesViewController: UICollectionViewDataSource, UICollectionViewDele
 		
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MovieCell.identifier, for: indexPath) as! MovieCell
 		cell.titleLabel.text = item.title
+		if item.thumbnailURL != nil {
+			cell.movieThumbnailImageView.af_setImage(withURL: item.thumbnailURL!)
+		}
+		else {
+			cell.movieThumbnailImageView.image = nil
+		}
 		
 		return cell
 	}
