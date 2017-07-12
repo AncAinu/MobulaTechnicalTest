@@ -17,6 +17,7 @@ protocol MoviesViewViewModel {
 	var items: Dynamic<[Item]> { get }
 	
 	func reloadMovies()
+	func movieViewViewModel(index: Int) -> MovieViewViewModel
 }
 
 class MoviesViewModelFromMovies: MoviesViewViewModel {
@@ -40,5 +41,9 @@ class MoviesViewModelFromMovies: MoviesViewViewModel {
 				}
 			}
 		}
+	}
+	
+	func movieViewViewModel(index: Int) -> MovieViewViewModel {
+		return MovieViewViewModelFromMovie(movie: movies[index])
 	}
 }

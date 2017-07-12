@@ -80,4 +80,10 @@ extension MoviesViewController: UICollectionViewDataSource, UICollectionViewDele
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
 		return 10
 	}
+	
+	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+		let movieViewViewModel = viewModel.movieViewViewModel(index: indexPath.row)
+		let movieViewController = MovieViewController(viewModel: movieViewViewModel)
+		navigationController?.pushViewController(movieViewController, animated: true)
+	}
 }
