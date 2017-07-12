@@ -8,5 +8,6 @@ target 'mobula-test' do
 # Pods for mobula-test
 pod 'KeepLayout', :git => 'https://github.com/Tricertops/KeepLayout'
 pod 'Alamofire'
+pod 'AlamofireImage'
 
 end
