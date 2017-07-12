@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Hero.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>KeepLayout.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,7 +37,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5024C8B2FCE6104CE207316ABDE949B4</key>
+		<key>4A3E211676B243619B026D147D272253</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>67EB44750BFE22F699CD4C1D3CD7A604</key>
 		<dict>
 			<key>primary</key>
 			<true/>

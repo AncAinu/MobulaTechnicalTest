@@ -2,6 +2,7 @@ PODS:
   - Alamofire (4.4.0)
   - AlamofireImage (3.2.0):
     - Alamofire (~> 4.1)
+  - Hero (0.3.6)
   - KeepLayout (1.7.0):
     - KeepLayout/Swift (= 1.7.0)
   - KeepLayout/ObjC (1.7.0)
@@ -11,6 +12,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - AlamofireImage
+  - Hero
   - KeepLayout (from `https://github.com/Tricertops/KeepLayout`)
 
 EXTERNAL SOURCES:
@@ -25,8 +27,9 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   AlamofireImage: 157ed682cc81d3b9db4fb90c1f12180ac552d93b
+  Hero: d3c6f4dd80cdcdbb339be64e57ae3b5c3ab9938c
   KeepLayout: 1881e51638fab0a0748890748de8deb9f01891a1
 
-PODFILE CHECKSUM: 3d6729c6b1e8f5849f8bda65e045b2a7c208e668
+PODFILE CHECKSUM: 5aa5db80f35c76e04dc1f8fd3363a37c74f7e288
 
 COCOAPODS: 1.2.1
